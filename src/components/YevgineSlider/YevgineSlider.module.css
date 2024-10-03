@@ -1,8 +1,9 @@
 .slider {
   position: relative;
-  max-width: 600px;
+  max-width: 70%;
   margin: auto;
   overflow: hidden;
+  border: 2px solid #ddd;
 }
 
 .slides {
@@ -20,7 +21,6 @@
 
 .slides img {
   width: 100%;
-  border: 2px solid #ddd;
 }
 
 .prev,
@@ -47,7 +47,6 @@
 .dots {
   text-align: center;
   padding: 10px;
-  background-color: #f1f1f1;
 }
 
 .dot {
@@ -69,4 +68,9 @@
   position: absolute;
   right: 0;
   top: 0;
+  cursor: pointer;
+  padding: 14px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 24px;
+  color: #fff;
 }

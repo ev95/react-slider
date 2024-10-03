@@ -1,5 +1,10 @@
 import { useState } from 'react';
 import styles from './YevgineSlider.module.css';
+import { FaAngleRight } from "react-icons/fa6";
+import { FaAngleLeft } from "react-icons/fa6";
+import { FaCirclePlay } from "react-icons/fa6";
+
+
 
 function YevgineSlider() {
     const [activeSlide, setActiveSlide] = useState(0);
@@ -38,6 +43,12 @@ function YevgineSlider() {
         }
     }
 
+    function autoplay() {
+        setInterval(() => {
+            nextSlide();
+        }, 2000);
+    }
+
     return (
         <>
             <div className={styles.slider}>
@@ -51,9 +62,9 @@ function YevgineSlider() {
                         ))
                     }
                 </div>
-                <span className={styles.autoplay}>Autoplay</span>
-                <button className={styles.prev} onClick={prevSlide}>&#10094;</button>
-                <button className={styles.next} onClick={nextSlide}>&#10095;</button>
+                <FaCirclePlay className={styles.autoplay} onClick={autoplay} />
+                <FaAngleLeft className={styles.prev} onClick={prevSlide} />
+                <FaAngleRight className={styles.next} onClick={nextSlide} />
             </div>
         </>
 
